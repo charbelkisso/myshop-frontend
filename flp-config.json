@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "sap.coil.myshop.myshop-frontend.myshop-frontend",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#myshopfrontend-Display",
+        "navigationComponentName": "sap.coil.myshop.myshop-frontend",
+        "intentSemanticObject": "myshop-frontend",
+        "intentAction": "Display",
+        "html5ApplicationName": "myshopfrontend",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "5bc9fba2-0922-4b9c-beda-829464b73bf8"
+        ],
+        "contentPackages": [
+            "70667541-6aa4-4c34-b3d6-dff5a378dfc9"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "My Panel ",
+        "subtitle": "Manage Items",
+        "searchKeywords": "My Panel ,Manage Items",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

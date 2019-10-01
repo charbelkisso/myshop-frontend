@@ -1,0 +1,56 @@
+<mvc:View controllerName="sap.coil.myshop.myshop-frontend.controller.Object" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+		<semantic:titleHeading>
+			<Title text="Item ID: {pid}"/>
+		</semantic:titleHeading>
+		<semantic:headerContent></semantic:headerContent>
+		<semantic:content>
+			<Panel class="sapFSemanticPageAlignContent" width="auto">
+				<content>
+					<Panel expandable="false" expand="true" headerText="Item Information" width="auto" class="sapUiResponsiveMargin">
+						<content>
+							<HBox>
+								<items>
+									<Image src="{link}" densityAware="true" width="50%"/>
+									<VBox>
+										<items>
+											<Title text="Item Name" width="auto" level="H1"/>
+											<Text text="{pname}" width="auto"/>
+										</items>
+									</VBox>
+								</items>
+							</HBox>
+						</content>
+					</Panel>
+					<Panel expandable="true" expanded="false" headerText="Item Description" width="auto" class="sapUiResponsiveMargin">
+						<content>
+							<HBox>
+								<items>
+									<Label text="Description Language" width="auto"/>
+									<ComboBox selectedKey="{lng}" editable="false">
+										<core:Item key="en" text="English"/>
+										<core:Item key="fr" text="French"/>
+										<core:Item key="de" text="German"/>
+										<core:Item key="it" text="Italian"/>
+										<core:Item key="es" text="Spanish"/>
+									</ComboBox>
+									<CheckBox id="valid" text="Valid to Publish" selected="{valid}" editable="fasle"/>
+								</items>
+							</HBox>
+							<TextArea id="description" editable="fasle" width="100%" rows="10" value="{desc}"/>
+						</content>
+					</Panel>
+				</content>
+			</Panel>
+		</semantic:content>
+		<semantic:titleMainAction>
+			<semantic:TitleMainAction text="Edit" press="onEditPressed"/>
+		</semantic:titleMainAction>
+		<semantic:footerCustomActions>
+			<Button text="Save" press="onSave"/>
+			<Button text="Cancel" press="onCancel"/>
+		</semantic:footerCustomActions>
+	</semantic:SemanticPage>
+</mvc:View>

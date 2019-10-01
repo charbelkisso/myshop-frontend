@@ -1,0 +1,21 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="CatalogService">
+			<EntityContainer Name="EntityContainer">
+				<EntitySet Name="Items" EntityType="CatalogService.Items"/>
+			</EntityContainer>
+			<EntityType Name="Items">
+				<Key>
+					<PropertyRef Name="skey"/>
+				</Key>
+				<Property Name="skey" Type="Edm.Guid" Nullable="false"/>
+				<Property Name="lng" Type="Edm.String" MaxLength="2"/>
+				<Property Name="pid" Type="Edm.String"/>
+				<Property Name="pname" Type="Edm.String"/>
+				<Property Name="link" Type="Edm.String"/>
+				<Property Name="desc" Type="Edm.String"/>
+				<Property Name="valid" Type="Edm.Boolean"/>
+			</EntityType>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

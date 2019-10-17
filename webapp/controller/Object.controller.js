@@ -60,8 +60,6 @@ sap.ui.define([
 		onSave: function(){
 			this.oModel = this.getModel();
 			this.oItem = this.getView().getBindingContext().getObject();
-			// this.oItem.valid = this.oCheckBox.getSelected();
-			// this.oItem.desc = this.oDescription.getText();
 			this.oModel.submitBatch(this.oModel.getUpdateGroupId()).then(function () {
 				MessageToast.show("Changes have been saved");
 			}, function (oError) {
